@@ -10,6 +10,7 @@ const Count = ({ count, setCount }) => {
   const decrement = () => {
     setCount((count) => count - 1);
   };
+
   return (
     <>
       <Text>React Way of Increment</Text>

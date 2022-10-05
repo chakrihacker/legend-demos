@@ -2,7 +2,11 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { ObservablePrimitiveChild } from "@legendapp/state";
 import React from "react";
-import { observer } from "@legendapp/state/react";
+import { Memo, observer } from "@legendapp/state/react";
+
+// const LSText = observer(({ value, ...rest }) => {
+//   return <Text {...rest}>{`Count: ${value.get()}`}</Text>;
+// });
 
 const LSCount = observer(
   ({ count }: { count: ObservablePrimitiveChild<number> }) => {
@@ -13,6 +17,7 @@ const LSCount = observer(
     const decrement = () => {
       count.set?.((prevCount) => prevCount - 1);
     };
+
     return (
       <>
         <Text>Legend Way of Increment</Text>
@@ -22,6 +27,10 @@ const LSCount = observer(
             <Text>{"+"}</Text>
           </Pressable>
           <Text style={styles.text}>{`Count: ${count.get()}`}</Text>
+          {/* <LSText style={styles.text} value={count} /> */}
+          {/* <Memo>
+            {() => <Text style={styles.text}>{`Count: ${count.get()}`}</Text>}
+          </Memo> */}
           <Pressable onPress={decrement} style={styles.button}>
             <Text>{"-"}</Text>
           </Pressable>

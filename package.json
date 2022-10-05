@@ -14,7 +14,7 @@
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "expo": "~46.0.13",
-    "expo-router": "^0.0.21",
+    "expo-router": "latest",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",

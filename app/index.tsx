@@ -7,8 +7,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Text>Legend Demos</Text>
-      <Link href={"/basic-example"}>{"1. Basic Example"}</Link>
+      <Text style={styles.heading}>Legend Demos</Text>
+      <Link style={styles.link} href={"/getting-started"}>
+        {"1. Getting Started"}
+      </Link>
+      <Link style={styles.link} href={"/stable-ref-problem"}>
+        {"2. Stable Ref Problem"}
+      </Link>
     </View>
   );
 }
@@ -19,5 +24,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  heading: {
+    fontSize: 24,
+  },
+  link: {
+    fontSize: 20,
+    color: "blue",
+    textDecorationLine: "underline",
+    padding: 5,
   },
 });
