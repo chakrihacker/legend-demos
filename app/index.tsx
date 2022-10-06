@@ -14,6 +14,9 @@ export default function App() {
       <Link style={styles.link} href={"/stable-ref-problem"}>
         {"2. Stable Ref Problem"}
       </Link>
+      <Link style={styles.link} href={"/fine-grained-reactivity"}>
+        {"3. Fine Grained Reactivity"}
+      </Link>
     </View>
   );
 }

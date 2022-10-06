@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^0.17.0",
-    "@legendapp/state": "next",
+    "@legendapp/state": "^0.19.0",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "expo": "~46.0.13",
@@ -27,7 +27,8 @@
     "typescript": "^4.6.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@welldone-software/why-did-you-render": "^7.0.1"
   },
   "overrides": {
     "metro": "0.72.3"
