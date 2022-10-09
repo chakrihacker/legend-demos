@@ -10,12 +10,16 @@ const LSInput = observer(({ value, error }) => {
   return (
     <View>
       <Text style={styles.text}>Enter your mobile number</Text>
-      <TextInput
-        style={styles.input}
-        value={value.get()}
-        onChangeText={(text) => value.set(text)}
-        onBlur={() => state.touched.set(true)}
-      />
+      <Memo>
+        {() => (
+          <TextInput
+            style={styles.input}
+            value={value.get()}
+            onChangeText={(text) => value.set(text)}
+            onBlur={() => state.touched.set(true)}
+          />
+        )}
+      </Memo>
       <Show if={state.touched}>
         {() => <Text style={styles.error}>{error.get()}</Text>}
       </Show>
