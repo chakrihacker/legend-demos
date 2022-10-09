@@ -5,22 +5,17 @@ import { Memo, observer, Show, useObservable } from "@legendapp/state/react";
 import { useTraceListeners, useTraceUpdates } from "@legendapp/state/trace";
 
 const LSInput = observer(({ value, error }) => {
-  const renderCount = ++useRef(0).current;
   const state = useObservable({ touched: false });
 
   return (
     <View>
-      <Text style={styles.text}>Enter your mobile number {renderCount}</Text>
-      <Memo>
-        {() => (
-          <TextInput
-            style={styles.input}
-            value={value.get()}
-            onChangeText={(text) => value.set(text)}
-            onBlur={() => state.touched.set(true)}
-          />
-        )}
-      </Memo>
+      <Text style={styles.text}>Enter your mobile number</Text>
+      <TextInput
+        style={styles.input}
+        value={value.get()}
+        onChangeText={(text) => value.set(text)}
+        onBlur={() => state.touched.set(true)}
+      />
       <Show if={state.touched}>
         {() => <Text style={styles.error}>{error.get()}</Text>}
       </Show>
