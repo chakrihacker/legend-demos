@@ -17,6 +17,9 @@ export default function App() {
       <Link style={styles.link} href={"/fine-grained-reactivity"}>
         {"3. Fine Grained Reactivity"}
       </Link>
+      <Link style={styles.link} href={"/easier-mental-model"}>
+        {"4. Easier Mental Model"}
+      </Link>
     </View>
   );
 }
